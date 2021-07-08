@@ -65,34 +65,41 @@ Gradle Wrapper
 ```shell
 $ ./gradlew cucumber
 ```
+
+### StepDefinition Class Suggestion
+Just create the following **Feature file** and then run Cucumber.
+
+```
+Feature: Account is credited with amount
+
+  Scenario: Credit amount
+    Given account balance is 0.0
+    When the account is credited with 10.0
+    Then account should have a balance of 10.0
+```
+
+Then you'll get the following message:
+
 ```shell
-Jul 08, 2021 2:31:42 PM cucumber.api.cli.Main run
-WARNING: You are using deprecated Main class. Please use io.cucumber.core.cli.Main
-......======--> 88% EXECUTING [1s]
-┌───────────────────────────────────────────────────────────────────────────────────┐
+You can implement missing steps with the snippets below:
 
-2 Scenarios (2 passed)
-6 Steps (6 passed)
-│ Share your Cucumber Report with your team at https://reports.cucumber.io          │
-0m0.290s
+@Given("account balance is {double}")
+public void account_balance_is(Double double1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
 
+@When("the account is credited with {double}")
+public void the_account_is_credited_with(Double double1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
 
-│ Activate publishing with one of the following:                                    │
-│                                                                                   │
-│ src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    │
-│ src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    │
-│ Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    │
-│ JUnit:                                           @CucumberOptions(publish = true) │
-│                                                                                   │
-│ More information at https://reports.cucumber.io/docs/cucumber-jvm                 │
-│                                                                                   │
-│ Disable this message with one of the following:                                   │
-│                                                                                   │
-│ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
-│ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
-└───────────────────────────────────────────────────────────────────────────────────┘
-
-BUILD SUCCESSFUL in 2s
+@Then("account should have a balance of {double}")
+public void account_should_have_a_balance_of(Double double1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
 ```
 
 ## Features
