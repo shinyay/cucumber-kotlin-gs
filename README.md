@@ -14,13 +14,21 @@ Cucumber-JVM is a Java implementation of Cucumber.
   - `junit-jupiter-engine:${junitVersion}`
 
 #### Version
-```
+```groovy
 ext {
     junitVersion = '5.7.2'
     cucumberVersion = '6.10.4'
 }
 ```
 
+### Dependency Configuration
+```groovy
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+```
 
 
 ## Demo
