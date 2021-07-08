@@ -30,6 +30,23 @@ configurations {
 }
 ```
 
+### Cucumber task for CLI
+```groovy
+task cucumberCli() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'pretty',
+                    '--plugin', 'html:target/cucumber-report.html',
+                    '--glue', 'com.google.shinyay',
+                    'src/test/resources']
+        }
+    }
+}
+```
 
 ## Demo
 
