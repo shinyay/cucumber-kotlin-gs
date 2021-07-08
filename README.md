@@ -48,6 +48,13 @@ task cucumberCli() {
 }
 ```
 
+### Cucumber plugin for Gradle Wrapper task
+```groovy
+plugins {
+    id 'se.thinkcode.cucumber-runner' version '0.0.9'
+}
+```
+
 ## Demo
 
 ## Features
