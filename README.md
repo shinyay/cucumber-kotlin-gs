@@ -1,6 +1,8 @@
-# Name
+# Getting Started with Cucumber in Kotlin
 
-Overview
+Cucumber is a testing tool that supports behavior-driven development (BDD)
+Cucumber-JVM is a Java implementation of Cucumber.
+
 
 ## Description
 
