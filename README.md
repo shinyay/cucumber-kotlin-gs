@@ -56,6 +56,44 @@ plugins {
 ```
 
 ## Demo
+Gradle
+```shell
+$ gradle cucumberCli
+```
+
+Gradle Wrapper
+```shell
+$ ./gradlew cucumber
+```
+```shell
+Jul 08, 2021 2:31:42 PM cucumber.api.cli.Main run
+WARNING: You are using deprecated Main class. Please use io.cucumber.core.cli.Main
+......======--> 88% EXECUTING [1s]
+┌───────────────────────────────────────────────────────────────────────────────────┐
+
+2 Scenarios (2 passed)
+6 Steps (6 passed)
+│ Share your Cucumber Report with your team at https://reports.cucumber.io          │
+0m0.290s
+
+
+│ Activate publishing with one of the following:                                    │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    │
+│ Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    │
+│ JUnit:                                           @CucumberOptions(publish = true) │
+│                                                                                   │
+│ More information at https://reports.cucumber.io/docs/cucumber-jvm                 │
+│                                                                                   │
+│ Disable this message with one of the following:                                   │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
+└───────────────────────────────────────────────────────────────────────────────────┘
+
+BUILD SUCCESSFUL in 2s
+```
 
 ## Features
 
