@@ -67,6 +67,8 @@ plugins {
     - Description for an event
   - `Then`
     - Description for an expected outcome
+  - `And`
+  - `But`
 ```
 Feature: Account is credited with amount
 
