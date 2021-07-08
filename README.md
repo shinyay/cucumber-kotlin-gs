@@ -55,6 +55,27 @@ plugins {
 }
 ```
 
+### Feature File
+- `Feature:`
+  - Name for Feature. It might be good to use a name similar to the file name
+- `Scenario:`
+  - Description for behavior.
+- **Steps**
+  - `Given`
+    - Description for an initial context
+  - `When`
+    - Description for an event
+  - `Then`
+    - Description for an expected outcome
+```
+Feature: Account is credited with amount
+
+  Scenario: Credit amount
+    Given account balance is 0.0
+    When the account is credited with 10.0
+    Then account should have a balance of 10.0
+```
+
 ## Demo
 Gradle
 ```shell
