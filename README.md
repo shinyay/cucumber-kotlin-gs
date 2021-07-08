@@ -5,6 +5,23 @@ Cucumber-JVM is a Java implementation of Cucumber.
 
 
 ## Description
+### Dependencies
+- io.cucumber
+  - `cucumber-java:${cucumberVersion}`
+  - `cucumber-junit:${cucumberVersion}`
+- org.junit.jupiter
+  - `junit-jupiter-api:${junitVersion}`
+  - `junit-jupiter-engine:${junitVersion}`
+
+#### Version
+```
+ext {
+    junitVersion = '5.7.2'
+    cucumberVersion = '6.10.4'
+}
+```
+
+
 
 ## Demo
 
