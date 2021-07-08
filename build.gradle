@@ -39,7 +39,6 @@ task cucumberCli() {
             args = [
                     '--plugin', 'pretty',
                     '--plugin', 'html:target/cucumber-report.html',
-                    '--glue', 'com.google.shinyay',
                     'src/test/resources']
         }
     }
